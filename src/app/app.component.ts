@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 
+// Usage of wordcount pipe within interpolation
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+selector: 'app-root',
+template: `
+        <div style="text-align:center">
+        <h2>{{customText}}</h2>
+          <h1>{{ customText | wordcount }}</h1>
+        </div>
+`
 })
 export class AppComponent {
-  title = 'appPruebaPipes';
+   customText: string = "Java is to JavaScript what car is to Carpet.";
 }
